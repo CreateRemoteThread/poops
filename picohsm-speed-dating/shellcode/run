@@ -1,0 +1,6 @@
+#!/bin/sh
+
+arm-linux-gnueabi-as -o sc.out fuck.s
+arm-linux-gnueabi-ld sc.out -o sc.elf
+arm-linux-gnueabi-objcopy -O binary sc.elf sc.bin
+xxd sc.bin
